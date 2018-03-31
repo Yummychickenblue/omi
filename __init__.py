@@ -7,8 +7,6 @@ from PyQt5.QtWidgets import QFileSystemModel
 import window
 import modinstaller
 
-def test():
-    print('button is working fine')
 
 class interface(window.App):
     def __init__(self, args, ui):
