@@ -4,9 +4,8 @@ import sys
 
 
 class App(QApplication):
-    def __init__(self, args, ui):
+    def __init__(self, args):
         super().__init__(args)
-        self.ui = ui
         
     def make_window(self):
         self.window = uic.loadUi("mainwindow.ui")
@@ -14,6 +13,10 @@ class App(QApplication):
     def show_window(self):
         self.window.show()
         
+    def set_window_title(self, name):
+        self.window.setWindowTitle(name)
+ 
+
 if __name__ == '__main__':
     app = App( args=sys.argv, ui='ui')
     app.make_window()
