@@ -56,11 +56,13 @@ def normalize_and_install():
         #print('NameError')
     modinstaller.write_openmwcfg(contents)
             
+        
 if __name__ == '__main__':
-    windowinterface = interface(args = sys.argv, ui='ui')
+    windowinterface = interface(args = sys.argv)
     windowinterface.make_window()
     windowinterface.create_old_file_view()
     windowinterface.mod_dir_chooser()
     windowinterface.normalize()
+    windowinterface.set_window_title(name='Omi')
     windowinterface.show_window()
     sys.exit(windowinterface.exec_())
