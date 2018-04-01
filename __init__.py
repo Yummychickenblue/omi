@@ -81,14 +81,3 @@ if __name__ == '__main__':
     windowinterface.normalize()
     windowinterface.show_window()
     sys.exit(windowinterface.exec_())
-
-        
-if __name__ == '__main__':
-    windowinterface = interface(args = sys.argv)
-    windowinterface.make_window()
-    windowinterface.create_old_file_view()
-    windowinterface.mod_dir_chooser()
-    windowinterface.normalize()
-    windowinterface.set_window_title(name='Omi')
-    windowinterface.show_window()
-    sys.exit(windowinterface.exec_())
