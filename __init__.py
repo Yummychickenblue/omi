@@ -12,8 +12,8 @@ class Interface(window.App):
     #Initializes the required QApplication object. 
     #The window module is a generic skeleton I made for loading PyQT 
     #programs.
-    def __init__(self, args, ui):
-        super().__init__(args, ui)
+    def __init__(self, args):
+        super().__init__(args)
         self.old_model = QtWidgets.QFileSystemModel()
         
     #Generic function to call a directory select dialog.
@@ -74,10 +74,11 @@ if __name__ == '__main__':
     #above. Maybe making a class and then calling every function 
     #isn't The Right Way to do things, but I'm not sure of a better
     #one.
-    windowinterface = Interface(args = sys.argv, ui='ui')
+    windowinterface = Interface(args = sys.argv)
     windowinterface.make_window()
     windowinterface.create_old_file_view()
     windowinterface.mod_dir_chooser()
     windowinterface.normalize()
+    windowinterface.set_window_title(name='Omi')
     windowinterface.show_window()
     sys.exit(windowinterface.exec_())
