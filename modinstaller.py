@@ -24,7 +24,7 @@ def openmw_home():
     return(os.environ.get('HOME') + '/.config/openmw')
 
 #Tests to see if there are any mod files in the given directory of arg.
-#Theoretically it breaks down if someone doesn't puts these words in
+#Theoretically it breaks down if someone puts these words in
 #in their mod name and doesn't wrap their files in a Data Files
 #directory. In the future I'm thinking of verifying the length of
 #folder names to protect against hat.
